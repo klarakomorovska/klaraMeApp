@@ -6,16 +6,45 @@
 //
 
 import SwiftUI
+//COMMENT
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            HStack {
+                Text("hi,")
+                    .font(.largeTitle)
+                          .multilineTextAlignment(.center)
+                          
+                      TextField("(type your name!)", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
+                          .multilineTextAlignment(.center)
+                          .font(.largeTitle)
+                                      
+                      }
+                  Button("Submit") {
+                  }
+                  .font(.title3)
+                  .buttonStyle(.borderedProminent)
+                  .tint(.gray)
+            
+            Text("this is me and my dog!")
+                .font(.title)
+            HStack {
+                Image("ludvik")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+                Image("me")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+            }
+            
+            
+            
+            
         }
-        .padding()
+      
     }
 }
 
